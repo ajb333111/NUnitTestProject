@@ -11,6 +11,15 @@ namespace NUnitTestProject1
     {
         private IWebDriver driver;
         private WebDriverWait wait;
+
+        private By rankingsHome = By.CssSelector("div.atp-nav-wrap-inner > nav > ul > li:nth-child(3) > a");
+        private By shopIcon = By.CssSelector("a.shop-link");
+        private By languageSelector = By.Id("languageSelector");
+        private By spanishSelector = By.CssSelector("a[data-language-code='es']");
+        private By searchIcon = By.Id("controlSearch");
+        private By searchBar = By.CssSelector("#siteSearch > input");
+        private By newsIcon = By.CssSelector("#playersWrapper > div > div:nth-child(3) > div > div > a:nth-child(2)");
+        private By cookieClose = By.ClassName("cookie-close");
         public ATPHome(IWebDriver driver)
         {
             this.driver = driver;
@@ -20,15 +29,6 @@ namespace NUnitTestProject1
 
         // [FindsBy(How = How.CssSelector, Using = "div.atp-nav-wrap-inner > nav > ul > li:nth-child(3) > a")]
         // private IWebElement rankingsHome;
-
-        private readonly By rankingsHome = By.CssSelector("div.atp-nav-wrap-inner > nav > ul > li:nth-child(3) > a");
-        private readonly By shopIcon = By.CssSelector("a.shop-link");
-        private readonly By languageSelector = By.Id("languageSelector");
-        private readonly By spanishSelector = By.CssSelector("a[data-language-code='es']");
-        private readonly By searchIcon = By.Id("controlSearch");
-        private readonly By searchBar = By.CssSelector("#siteSearch > input");
-        private readonly By newsIcon = By.CssSelector("#playersWrapper > div > div:nth-child(3) > div > div > a:nth-child(2)");
-        private readonly By cookieClose = By.ClassName("cookie-close");
 
         public void loadPage()
         {         

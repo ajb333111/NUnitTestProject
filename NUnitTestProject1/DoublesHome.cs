@@ -10,6 +10,9 @@ namespace NUnitTestProject1
         private IWebDriver driver;
         private WebDriverWait wait;
 
+        private By fifthRankedPlayerInfo = By.CssSelector("#singlesRanking > div > table > tbody > tr:nth-child(5) > td:nth-child(4) > a");
+
+
         public DoublesHome(IWebDriver driver)
         {
             this.driver = driver;
@@ -18,8 +21,6 @@ namespace NUnitTestProject1
 
         // [FindsBy(How = How.CssSelector, Using = "#singlesRanking > div > table > tbody > tr:nth-child(5) > td:nth-child(4) > a")]
         // private IWebElement fifthRankedPlayerInfo;
-
-        private readonly By fifthRankedPlayerInfo = By.CssSelector("#singlesRanking > div > table > tbody > tr:nth-child(5) > td:nth-child(4) > a");
 
         public PlayerInfoPage goToPlayersBio()
         {

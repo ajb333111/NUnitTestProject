@@ -9,7 +9,9 @@ namespace NUnitTestProject1
     {
         private IWebDriver driver;
         private WebDriverWait wait;
-        
+
+        private By rank = By.CssSelector("div[data-doubles='5']");
+
         public PlayerInfoPage(IWebDriver driver)
         {
             this.driver = driver;
@@ -19,8 +21,6 @@ namespace NUnitTestProject1
 
         // [FindsBy(How = How.CssSelector, Using = "div[data-singles='5']")]
         // private IWebElement five;
-
-        private readonly By rank = By.CssSelector("div[data-doubles='5']");
 
         public string getRanking()
         {

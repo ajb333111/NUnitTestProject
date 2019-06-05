@@ -12,14 +12,14 @@ namespace NUnitTestProject1
         private IWebDriver driver;
         private WebDriverWait wait;
 
+        private By languageSelector = By.Id("languageSelector");
+        private By englishSelector = By.CssSelector("a[data-language-code='en']");
+
         public SpanishHome (IWebDriver driver)
         {
             this.driver = driver;
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
         }
-
-        private readonly By languageSelector = By.Id("languageSelector");
-        private readonly By englishSelector = By.CssSelector("a[data-language-code='en']");
 
         public ATPHome goToEnglishHomePage()
         {

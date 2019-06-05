@@ -10,17 +10,19 @@ namespace NUnitTestProject1
     {
         private IWebDriver driver;
         private WebDriverWait wait;
+
+        private By newsHeader = By.CssSelector("#categoryListing li > div > h3 > a");
+        private By newsName = By.CssSelector("ul.breadcrumb-titles > li");
+
         public News (IWebDriver driver)
         {
             this.driver = driver;
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
         }
 
-        private readonly By newsHeader = By.CssSelector("#categoryListing li > div > h3 > a");
-
         public string getTextFromHeader()
         {
-            return wait.Until(ExpectedConditions.ElementIsVisible(newsHeader)).Text;
+            return wait.Until(ExpectedConditions.ElementIsVisible(newsName)).Text;
         }
     }
 }

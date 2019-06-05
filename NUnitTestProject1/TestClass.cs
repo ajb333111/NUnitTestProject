@@ -63,14 +63,14 @@ namespace Tests
         }
 
         // Probably not the best kind of test since the first article title could change
-        [TestCase("Rafael Nadal", ExpectedResult = "Federer & Nadal's 10 Best Quotes About Each Other")]
-        [TestCase("Roger Federer", ExpectedResult = "Federer Puts Up 'Help Wanted' Sign In Paris Ahead Of Nadal Clash")]
+        [TestCase("Rafael Nadal", ExpectedResult = "Rafael Nadal")]
+        [TestCase("Roger Federer", ExpectedResult = "Roger Federer")]
         [Description(@"Given my two favorite tennis players are Rafael Nadal and Roger Federer
                        And I am on the ATP home page
                        When I click the 'Search' icon
                        And I type in each of their names
                        And I click on 'News'
-                       Then I should see the latest news article for that player")]
+                       Then I should see the latest news articles for that player")]
         public string Should_be_able_to_find_news_articles_for_a_certain_player(string player)
         {
             ATPHome home = new ATPHome(driver);

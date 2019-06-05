@@ -12,6 +12,8 @@ namespace NUnitTestProject1
         private IWebDriver driver;
         private WebDriverWait wait;
 
+        private By doublesRankings = By.CssSelector("#Rankings_subNav > ul > li[data-title='Doubles'] > a");
+
         public RankingsHome (IWebDriver driver)
         {
             this.driver = driver;
@@ -20,8 +22,6 @@ namespace NUnitTestProject1
 
         // [FindsBy(How = How.CssSelector, Using = "a[data-ga-label='Singles']")]
         // private IWebElement singlesRankings;
-
-        private By doublesRankings = By.CssSelector("#Rankings_subNav > ul > li[data-title='Doubles'] > a");
 
         public DoublesHome goToSinglesRankings()
         {
